@@ -2,18 +2,16 @@ from setuptools import setup, find_packages
 
 setup(
     name="xlpd",
-    version="0.1.7",
+    version="0.1.8",
     author="Yinchu Xia",
     author_email="sales@pytorchsoft.com",
-    description="xiu lian ping de",
+    description="Xiu Lian Pin De",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/pytorchsoft/xlpd",
-    packages=["xlpd"],
-    install_requires=[
-        "numpy",  # List your dependencies here
-        "typer",
-    ],
+    packages=find_packages("src"),
+    package_dir={"": "src"},
+    install_requires=[],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
