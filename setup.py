@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="xlpd",
-    version="0.1.2",
+    version="0.1.5",
     author="Yinchu Xia",
     author_email="sales@pytorchsoft.com",
     description="xiu lian ping de",
@@ -12,7 +12,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "numpy",  # List your dependencies here
-        "requests",
+        "typer",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -22,7 +22,7 @@ setup(
     python_requires=">=3.7",
     entry_points={
         "console_scripts": [
-            "xlpd = xlpd:cli",
+            "xlpd = xlpd.cli:app",
         ]
     },
 )
