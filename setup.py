@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="xlpd",
-    version="0.1.8",
+    version="0.1.9",
     author="Yinchu Xia",
     author_email="sales@pytorchsoft.com",
     description="Xiu Lian Pin De",
@@ -12,11 +12,7 @@ setup(
     packages=find_packages("src"),
     package_dir={"": "src"},
     install_requires=[],
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
+    classifiers=[],
     python_requires=">=3.7",
     entry_points={
         "console_scripts": [
