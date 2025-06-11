@@ -1,4 +1,4 @@
-from xlpd.add import addint
+from add import addint
 
 
 def app():
