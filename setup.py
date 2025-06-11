@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="xlpd",
-    version="0.1.10",
+    version="0.1.11",
     author="Yinchu Xia",
     author_email="sales@pytorchsoft.com",
     description="Xiu Lian Pin De",
@@ -16,7 +16,7 @@ setup(
     python_requires=">=3.7",
     entry_points={
         "console_scripts": [
-            "xlpd = xlpd.cli:app",
+            "xlpd = xlpd.add:cli",
         ]
     },
 )
