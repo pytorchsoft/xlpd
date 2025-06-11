@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="xlpd",
-    version="0.1.5",
+    version="0.1.6",
     author="Yinchu Xia",
     author_email="sales@pytorchsoft.com",
     description="xiu lian ping de",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/pytorchsoft/xlpd",
-    packages=find_packages(),
+    packages=find_packages("src"),
     install_requires=[
         "numpy",  # List your dependencies here
         "typer",
