@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="xlpd",
-    version="0.1.9",
+    version="0.1.10",
     author="Yinchu Xia",
     author_email="sales@pytorchsoft.com",
     description="Xiu Lian Pin De",
