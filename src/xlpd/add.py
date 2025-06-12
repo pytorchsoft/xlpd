@@ -1,9 +1,8 @@
-def addint(a: int, b: int) -> int:
-    return a + b
+from ._core import __doc__, __version__, add, subtract
 
 
 def cli():
-    print(f"1 + 2 = {addint(1,2)}")
+    print(f"1 + 2 = {add(1,2)}")
 
 
 if __name__ == "__main__":

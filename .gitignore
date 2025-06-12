@@ -3,3 +3,7 @@ dist
 xlpd.egg-info
 __pycache__
 .env
+*.so
+*.whl
+wheelhouse
+build
