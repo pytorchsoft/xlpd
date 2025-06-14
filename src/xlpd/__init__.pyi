@@ -9,3 +9,8 @@ def color_to_grayscale(color: np.ndarray) -> np.ndarray:
     """
     color to grayscale
     """
+
+def blur(color: np.ndarray) -> np.ndarray:
+    """
+    blur
+    """

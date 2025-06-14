@@ -13,6 +13,7 @@ set(SRCS
     src/check.cu
     src/vector_add.cu
     src/color_to_grayscale.cu
+    src/blur.cu
     src/xlpd.cu
 )
 

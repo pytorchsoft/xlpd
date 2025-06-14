@@ -5,7 +5,7 @@
 
 namespace py = pybind11;
 
-__global__ void color_to_grayscale_kernel(uint8_t *pout, uint8_t *pin, ssize_t width, ssize_t height)
+__global__ void color_to_grayscale_kernel(uint8_t *pin, uint8_t *pout, ssize_t width, ssize_t height)
 {
     int col = blockIdx.x * blockDim.x + threadIdx.x;
     int row = blockIdx.y * blockDim.y + threadIdx.y;
@@ -38,7 +38,7 @@ py::array_t<uint8_t> color_to_grayscale(py::array_t<uint8_t> pin)
     unsigned int h = ceil(height / 16.0f);
     dim3 block = {16, 16, 1};
     dim3 grid = {w, h, 1};
-    color_to_grayscale_kernel<<<grid, block>>>(pout_d, pin_d, width, height);
+    color_to_grayscale_kernel<<<grid, block>>>(pin_d, pout_d, width, height);
     CHECK(cudaMemcpy(pout_h, pout_d, pout.size(), cudaMemcpyDeviceToHost));
     CHECK(cudaFree(pin_d));
     CHECK(cudaFree(pout_d));

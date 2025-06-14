@@ -6,6 +6,7 @@
 PYBIND11_MODULE(_core, m)
 {
     m.def("vector_add", &vector_add, "vector_add");
-    m.def("color_to_grayscale", &color_to_grayscale, "color_to_grayscale", py::return_value_policy::move);
+    m.def("color_to_grayscale", &color_to_grayscale, "color_to_grayscale");
+    m.def("blur", &blur, "blur");
     m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
 }

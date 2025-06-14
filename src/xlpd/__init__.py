@@ -1,5 +1,5 @@
 from __future__ import annotations
 
-from ._core import __doc__, __version__, vector_add, color_to_grayscale
+from ._core import __doc__, __version__, vector_add, color_to_grayscale, blur
 
-__all__ = ["__doc__", "__version__", "vector_add", "color_to_grayscale"]
+__all__ = ["__doc__", "__version__", "vector_add", "color_to_grayscale", "blur"]
