@@ -25,4 +25,4 @@ cmake.args = [
 ]
 
 [project.scripts]
-xlpd = "xlpd.add:cli"
+xlpd = "xlpd.cli:cli"

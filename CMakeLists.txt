@@ -1,19 +1,23 @@
 cmake_minimum_required(VERSION 3.28)
 
-project(xlpd CXX CUDA)
-
+project(xlpd LANGUAGES CXX CUDA)
 
 set(CMAKE_CUDA_STANDARD 17)
 set(CMAKE_CUDA_STANDARD_REQUIRED ON)
-find_package(CUDAToolkit REQUIRED)
 
 find_package(Python REQUIRED COMPONENTS Interpreter Development.Module)
 find_package(pybind11 CONFIG REQUIRED)
+find_package(CUDAToolkit REQUIRED)
 
-python_add_library(_core MODULE src/main.cu WITH_SOABI)
-target_link_libraries(_core PRIVATE pybind11::headers)
+set(SRCS
+    src/check.cu
+    src/vector_add.cu
+    src/color_to_grayscale.cu
+    src/xlpd.cu
+)
 
-target_compile_options(_core PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-O2>)
+pybind11_add_module(_core ${SRCS})
 
+target_compile_definitions(_core PRIVATE VERSION_INFO=${SKBUILD_PROJECT_VERSION})
 
 install(TARGETS _core DESTINATION xlpd)

@@ -1,19 +1,11 @@
-"""
-Pybind11 example plugin
------------------------
+import numpy as np
 
-.. currentmodule:: scikit_build_example
-
-.. autosummary::
-    :toctree: _generate
-
-    add
-    subtract
-"""
-
-def add(i: int, j: int) -> int:
+def vector_add(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     """
-    Add two numbers
+    vector_add
+    """
 
-    Some other explanation about the add function.
+def color_to_grayscale(color: np.ndarray) -> np.ndarray:
+    """
+    color to grayscale
     """

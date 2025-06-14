@@ -7,3 +7,5 @@ __pycache__
 *.whl
 wheelhouse
 build
+.cache
+.vscode
